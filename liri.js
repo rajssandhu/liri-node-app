@@ -35,7 +35,8 @@ function tweets() {
         console.log("Error occurred: " + (err));
     } else {
         for (var i = 0; i < tweets.length; i++) {
-            console.log("Tweets: \n Tweet # " + (i + 1) + ": " + tweets[i].text + "\n  Tweeted on: " + tweets[i].created_at);
+			console.log("--------------------------------------------")
+            console.log("\n Tweet # " + (i + 1) + ": " + tweets[i].text + "\n Tweeted on: " + tweets[i].created_at);
         };
     };
 });
@@ -51,6 +52,7 @@ function spotifySong() {
           console.log("Error occurred: " + err);
         } else {
             for (i = 0; i < data.tracks.items.length; i++) {
+				console.log("-----------------------------------------------------------------")
                 console.log("Result # " + (i + 1));
                 console.log("Artist: " + data.tracks.items[i].artists[0].name);
                 console.log("Track: " + data.tracks.items[i].name);
